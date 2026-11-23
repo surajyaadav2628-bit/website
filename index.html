@@ -6,6 +6,19 @@
 <title>invsuraj – Alight Motion XML Pack</title>
 <meta name="description" content="Aesthetic Alight Motion XML files by invsuraj. Import, swap in your clips and edit.">
 <meta name="theme-color" content="#12112B">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E✨%3C/text%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="invsuraj">
+<meta property="og:title" content="invsuraj – Alight Motion XML Pack">
+<meta property="og:description" content="12+ aesthetic Alight Motion XML files. Import, swap in your clips and edit. ₹499 one pack.">
+<meta property="og:image" content="https://YOUR-DOMAIN.com/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://YOUR-DOMAIN.com/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="invsuraj – Alight Motion XML Pack">
+<meta name="twitter:description" content="12+ aesthetic Alight Motion XML files. Import, swap in your clips and edit.">
+<meta name="twitter:image" content="https://YOUR-DOMAIN.com/og.png">
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;800&family=Manrope:wght@400;600&family=Unbounded:wght@800&display=swap" rel="stylesheet">
 <style>
 :root{color-scheme:dark;--bg:#12112B;--surface:#1C1B3D;--text:#F1F0FF;--muted:#A9A8CC;--line:#33315F;--blue:#7F95FF;--pink:#FF5C93;--btn-text:#12112B;
@@ -191,6 +204,35 @@ footer p{margin:0 0 6px}
 footer a{color:inherit;text-underline-offset:3px}
 footer a:hover{color:var(--text)}
 footer{padding:36px 0 96px;color:var(--muted);font-size:15px;border-top:1px solid var(--line)}
+
+#welcome{clip-path:circle(150% at 50% 62%);transition:opacity .8s .1s,visibility .9s,clip-path .8s cubic-bezier(.7,0,.2,1)}
+#welcome.hide{clip-path:circle(0% at 50% 62%)}
+h2{position:relative}
+h2::after{content:"";display:block;width:64px;height:4px;margin-top:12px;border-radius:4px;background:linear-gradient(90deg,var(--blue),var(--pink));box-shadow:0 0 14px rgba(255,92,147,.7);transition:width .9s cubic-bezier(.2,.8,.2,1) .2s}
+.js h2.rv::after{width:0}
+.js h2.rv.in::after{width:64px}
+#cur{position:fixed;left:0;top:0;width:420px;height:420px;margin:-210px 0 0 -210px;border-radius:50%;background:radial-gradient(circle,rgba(255,92,147,.17),transparent 65%);pointer-events:none;z-index:-1;opacity:0;transition:opacity .4s;will-change:transform}
+#showcase{position:relative;height:clamp(340px,62vw,460px);padding:0;margin:8px 0 40px;border:1px solid rgba(127,149,255,.35);border-radius:26px;overflow:hidden;display:grid;place-items:center;background:radial-gradient(420px 300px at 50% 55%,rgba(255,92,147,.22),transparent 70%),radial-gradient(500px 340px at 15% 10%,rgba(127,149,255,.25),transparent 70%),rgba(28,27,61,.55);box-shadow:0 0 60px -10px rgba(127,149,255,.45)}
+#gl{position:absolute;inset:0;width:100%;height:100%;display:block}
+.chara{position:relative;z-index:2;width:clamp(170px,38vw,250px);transform:perspective(700px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transition:transform .18s ease-out}
+.chibi{display:block;width:100%;height:auto;filter:drop-shadow(0 0 26px rgba(255,92,147,.55));animation:bob 4s ease-in-out infinite alternate}
+@keyframes bob{to{transform:translateY(-14px) rotate(1.5deg)}}
+.sp{position:absolute;left:var(--x);top:var(--y);width:var(--s);height:var(--s);background:#fff;clip-path:polygon(50% 0,60% 40%,100% 50%,60% 60%,50% 100%,40% 60%,0 50%,40% 40%);animation:tw 2.4s ease-in-out infinite;animation-delay:var(--d)}
+.sp.p{background:#FF8FB3}
+@keyframes tw{0%,100%{transform:scale(.3) rotate(0);opacity:.2}50%{transform:scale(1) rotate(90deg);opacity:1}}
+.bubble{position:absolute;left:60%;top:0;background:#fff;color:#12112B;font:700 14px Sora,sans-serif;padding:9px 14px;border-radius:16px 16px 16px 4px;white-space:nowrap;transform-origin:0 100%;box-shadow:0 0 24px rgba(127,149,255,.7);animation:pop 5s ease-in-out infinite}
+@keyframes pop{0%,8%{transform:scale(0)}14%,86%{transform:scale(1)}94%,100%{transform:scale(0)}}
+.mini-c{width:92px;height:auto;filter:drop-shadow(0 0 16px rgba(255,92,147,.6));animation:bob 4s ease-in-out infinite alternate}
+@media (max-width:520px){.price .mini-c{display:none}}
+@media (prefers-reduced-motion:reduce){#welcome{transition:opacity .3s,visibility .3s}.chibi,.mini-c,.sp{animation:none}.bubble{animation:none}.chara{transition:none}}
+.chara{cursor:pointer}
+.chara::before{content:"";position:absolute;inset:-20%;border-radius:50%;z-index:-1;background:conic-gradient(rgba(127,149,255,0),rgba(127,149,255,.5),rgba(255,92,147,.5),rgba(127,149,255,0));filter:blur(30px);animation:aur 9s linear infinite}
+.chara::after{content:"";position:absolute;left:20%;right:20%;bottom:-16px;height:14px;border-radius:50%;background:rgba(0,0,0,.5);filter:blur(8px);animation:gsh 4s ease-in-out infinite alternate}
+@keyframes aur{to{transform:rotate(360deg)}}
+@keyframes gsh{to{transform:scaleX(.8);opacity:.6}}
+.nt{position:absolute;left:var(--x);top:36%;font:700 20px Sora,sans-serif;color:var(--c);text-shadow:0 0 12px var(--c);opacity:0;pointer-events:none;animation:note 4.5s ease-out infinite;animation-delay:var(--d)}
+@keyframes note{0%{opacity:0;transform:translate(0,10px) scale(.6)}15%{opacity:.9}100%{opacity:0;transform:translate(var(--dx),-120px) rotate(var(--r)) scale(1.1)}}
+@media (prefers-reduced-motion:reduce){.nt{display:none}.chara::before,.chara::after{animation:none}}
 </style>
 <script>if(!window.matchMedia('(prefers-reduced-motion:reduce)').matches){document.documentElement.classList.add('js');setTimeout(function(){document.documentElement.classList.add('ready')},7500)}</script>
 </head>
@@ -218,6 +260,30 @@ footer{padding:36px 0 96px;color:var(--muted);font-size:15px;border-top:1px soli
 <span class="playhead"></span>
 </div>
 </div>
+
+<section id="showcase" aria-label="Preview">
+<canvas id="gl" aria-hidden="true"></canvas>
+<div class="chara" id="chara">
+<svg class="chibi" viewBox="0 0 200 240" role="img" aria-label="Anime character wearing headphones"><defs><linearGradient id="hg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#9AA9FF"/><stop offset="1" stop-color="#FF7FB0"/></linearGradient><linearGradient id="eg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7F95FF"/><stop offset="1" stop-color="#FF5C93"/></linearGradient></defs>
+<g id="chibi">
+<g><path d="M34 120c-26 20-24 70-6 96 6-30 14-52 22-70z" fill="url(#hg)"/><animateTransform attributeName="transform" type="rotate" values="0 44 118;4 44 118;0 44 118;-3 44 118;0 44 118" dur="5s" repeatCount="indefinite"/></g><g><path d="M166 120c26 20 24 70 6 96-6-30-14-52-22-70z" fill="url(#hg)"/><animateTransform attributeName="transform" type="rotate" values="0 156 118;-4 156 118;0 156 118;3 156 118;0 156 118" dur="5.6s" repeatCount="indefinite"/></g>
+<path d="M30 112C20 42 70 10 100 10s80 32 70 102c-4 40 8 60-14 80-10-30-20-40-56-40s-46 10-56 40c-22-20-10-40-14-80z" fill="url(#hg)"/>
+<path d="M60 206c3-24 20-44 40-44s37 20 40 44v34H60z" fill="#232152" stroke="#7F95FF" stroke-width="3"/><path d="M92 176v22M108 176v22" stroke="#FF5C93" stroke-width="3" stroke-linecap="round"/>
+<ellipse cx="100" cy="115" rx="52" ry="50" fill="#FFE3D6"/>
+<g><ellipse cx="78" cy="122" rx="11" ry="15" fill="#2A1B5C"/><ellipse cx="122" cy="122" rx="11" ry="15" fill="#2A1B5C"/><g id="pl"><ellipse cx="78" cy="125" rx="8" ry="10" fill="url(#eg)"/><circle cx="74" cy="116" r="4" fill="#fff"/><circle cx="82" cy="130" r="2" fill="#fff"/></g><g id="pr"><ellipse cx="122" cy="125" rx="8" ry="10" fill="url(#eg)"/><circle cx="118" cy="116" r="4" fill="#fff"/><circle cx="126" cy="130" r="2" fill="#fff"/></g></g>
+<rect x="60" y="104" width="80" height="0" fill="#FFE3D6"><animate attributeName="height" values="0;0;34;0;0" keyTimes="0;.9;.94;.98;1" dur="4s" repeatCount="indefinite"/></rect>
+<ellipse cx="64" cy="143" rx="9" ry="5" fill="#FF8FB3" opacity=".55"/><ellipse cx="136" cy="143" rx="9" ry="5" fill="#FF8FB3" opacity=".55"/>
+<path d="M92 147q8 8 16 0" stroke="#C2457A" stroke-width="3" fill="none" stroke-linecap="round"/>
+<path d="M48 108C50 56 88 40 100 40s50 16 52 68c-14-24-30-36-52-36S62 84 48 108z" fill="url(#hg)"/><path d="M100 40c-6 22-20 40-34 52 14-4 30-10 40-24z" fill="#C7A6FF" opacity=".7"/>
+<g><path d="M100 14c-8-16 8-22 14-10" stroke="#FF7FB0" stroke-width="4" fill="none" stroke-linecap="round"/><animateTransform attributeName="transform" type="rotate" values="0 100 40;9 100 40;-6 100 40;0 100 40" dur="3.4s" repeatCount="indefinite"/></g>
+<circle cx="38" cy="126" r="6" fill="#FF5C93"/><circle cx="162" cy="126" r="6" fill="#FF5C93"/>
+<path d="M44 112C40 44 160 44 156 112" fill="none" stroke="#FF5C93" stroke-width="8" stroke-linecap="round"/><rect x="30" y="100" width="20" height="36" rx="9" fill="#7F95FF"/><rect x="150" y="100" width="20" height="36" rx="9" fill="#7F95FF"/>
+</g></svg>
+<i class="sp" style="--x:-30%;--y:12%;--s:22px;--d:0s"></i><i class="sp p" style="--x:112%;--y:40%;--s:18px;--d:.5s"></i><i class="sp" style="--x:100%;--y:88%;--s:14px;--d:1s"></i><i class="sp p" style="--x:-22%;--y:70%;--s:16px;--d:1.4s"></i><i class="sp" style="--x:50%;--y:-8%;--s:12px;--d:1.9s"></i>
+<b class="nt" style="--x:-6%;--c:#7F95FF;--d:0s;--dx:-26px;--r:-14deg">♪</b><b class="nt" style="--x:96%;--c:#FF8FB3;--d:1.5s;--dx:24px;--r:12deg">♫</b><b class="nt" style="--x:86%;--c:#9AA9FF;--d:3s;--dx:18px;--r:8deg">♪</b>
+<div class="bubble">Import. Swap. Slay ✨</div>
+</div>
+</section>
 
 <div class="band" aria-hidden="true"><div class="bt"><span>Grab your XML</span><i></i><span class="ol">Grab your XML</span><i></i><span>Grab your XML</span><i></i><span class="ol">Grab your XML</span><i></i><span>Grab your XML</span><i></i><span class="ol">Grab your XML</span><i></i><span>Grab your XML</span><i></i><span class="ol">Grab your XML</span><i></i></div><div class="bt rev"><span class="ol">Grab your XML</span><i></i><span>Grab your XML</span><i></i><span class="ol">Grab your XML</span><i></i><span>Grab your XML</span><i></i><span class="ol">Grab your XML</span><i></i><span>Grab your XML</span><i></i><span class="ol">Grab your XML</span><i></i><span>Grab your XML</span><i></i></div></div>
 <section id="stats"><div class="stats">
@@ -261,6 +327,7 @@ footer{padding:36px 0 96px;color:var(--muted);font-size:15px;border-top:1px soli
 <div class="amt">₹499</div>
 <ul><li>Instant download after payment</li><li>Use in your own videos</li><li>Reselling the files is not allowed</li></ul>
 </div>
+<svg class="mini-c" viewBox="0 0 200 240" aria-hidden="true"><use href="#chibi"/></svg>
 <a class="btn" href="mailto:sur2j@hotmail.com?subject=Alight%20Motion%20XML%20Pack%20order">Buy the pack</a>
 </div>
 </section>
@@ -308,6 +375,42 @@ footer{padding:36px 0 96px;color:var(--muted);font-size:15px;border-top:1px soli
 </script>
 <script>
 (function(){var d=document,r=d.documentElement;if(!r.classList.contains('js'))return;var bar=d.getElementById('bar'),fab=d.querySelector('.fab'),st=d.querySelector('.steps'),sl=d.querySelectorAll('.step'),tk=false;function upd(){var y=window.scrollY,h=r.scrollHeight-window.innerHeight;r.style.setProperty('--sy',y);if(fab)fab.classList.toggle('show',y>500);if(st){var rc=st.getBoundingClientRect(),lh=sl[sl.length-1].offsetHeight,L=Math.max(rc.height-lh,1),p=Math.max(0,Math.min(1,(window.innerHeight*.72-rc.top-20)/L));st.style.setProperty('--lb',(lh-20)+'px');st.style.setProperty('--lp',p);sl.forEach(function(s){s.classList.toggle('on',s.getBoundingClientRect().top<window.innerHeight*.72)})}if(bar)bar.style.transform='scaleX('+(h>0?Math.min(y/h,1):0)+')';tk=false}window.addEventListener('scroll',function(){if(!tk){tk=true;requestAnimationFrame(upd)}},{passive:true});upd();var io=new IntersectionObserver(function(es){es.forEach(function(e){var el=e.target;clearTimeout(el._t);if(e.isIntersecting){el.classList.add('in');el._t=setTimeout(function(){el.classList.remove('rv','in')},2400)}else{el.classList.remove('in');el.classList.add('rv')}})},{threshold:.12,rootMargin:'0px 0px -6% 0px'});d.querySelectorAll('main section h2,.sub,.item,.box,.price,details,.step,.stat').forEach(function(el){var i=Array.prototype.indexOf.call(el.parentNode.children,el);el.style.setProperty('--d',(i%4)*0.1+'s');el.classList.add('rv');io.observe(el)});d.querySelectorAll('.num').forEach(function(n){var to=+n.dataset.to,pre=n.dataset.pre||'',suf=n.dataset.suf||'';n.textContent=pre+0+suf;var rf=0;new IntersectionObserver(function(es){cancelAnimationFrame(rf);if(es[0].isIntersecting){var t0=null;rf=requestAnimationFrame(function f(t){if(!t0)t0=t;var p=Math.min((t-t0)/1500,1);n.textContent=pre+Math.round(to*(1-Math.pow(1-p,3)))+suf;if(p<1)rf=requestAnimationFrame(f)})}else{n.textContent=pre+0+suf}},{threshold:.6}).observe(n)});if(window.matchMedia('(hover:hover) and (pointer:fine)').matches)d.querySelectorAll('.box').forEach(function(b){b.addEventListener('pointermove',function(e){var q=b.getBoundingClientRect(),x=(e.clientX-q.left)/q.width,y=(e.clientY-q.top)/q.height;b.style.setProperty('--mx',x*100+'%');b.style.setProperty('--my',y*100+'%');b.style.setProperty('--rx',((.5-y)*10)+'deg');b.style.setProperty('--ry',((x-.5)*12)+'deg')});b.addEventListener('pointerleave',function(){b.style.setProperty('--rx','0deg');b.style.setProperty('--ry','0deg')})})}());
+</script>
+<div id="cur" aria-hidden="true"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+(function(){
+var d=document,sc=d.getElementById('showcase'),cv=d.getElementById('gl'),ch=d.getElementById('chara'),T=window.THREE,rm=matchMedia('(prefers-reduced-motion:reduce)').matches,px=0,py=0;
+var cur=d.getElementById('cur');
+if(cur&&matchMedia('(hover:hover) and (pointer:fine)').matches&&!rm){addEventListener('pointermove',function(e){cur.style.opacity=1;cur.style.transform='translate3d('+e.clientX+'px,'+e.clientY+'px,0)'},{passive:true})}
+sc.addEventListener('pointermove',function(e){var r=sc.getBoundingClientRect();px=(e.clientX-r.left)/r.width-.5;py=(e.clientY-r.top)/r.height-.5});
+sc.addEventListener('pointerleave',function(){px=py=0});
+var pl=d.getElementById('pl'),pr=d.getElementById('pr'),bub=d.querySelector('.bubble'),tx=0,ty=0,ex=0,ey=0,last=-9e9,nw=0,sv=true,lines=['Import. Swap. Slay ✨','Tap tap! 💙','Edit karo, vibe lao 🎬','Hi! Pick a style ↓'],li=0;
+addEventListener('pointermove',function(e){var r=ch.getBoundingClientRect(),dx=e.clientX-(r.left+r.width/2),dy=e.clientY-(r.top+r.height*.45),m=Math.hypot(dx,dy)||1,k=Math.min(m/240,1);tx=dx/m*k;ty=dy/m*k;last=performance.now()},{passive:true});
+new IntersectionObserver(function(e){sv=e[0].isIntersecting}).observe(sc);
+ch.addEventListener('click',function(){li=(li+1)%lines.length;bub.textContent=lines[li];bub.style.animation='none';void bub.offsetWidth;bub.style.animation=''});
+function eyes(now){requestAnimationFrame(eyes);if(!sv||rm)return;if(now-last>2500&&now>nw){tx=(Math.random()-.5)*1.6;ty=(Math.random()-.5)*.8;nw=now+1300+Math.random()*1800}ex+=(tx-ex)*.1;ey+=(ty-ey)*.1;var a='translate('+(ex*4.2).toFixed(2)+' '+(ey*3.6).toFixed(2)+')';pl.setAttribute('transform',a);pr.setAttribute('transform',a);ch.style.setProperty('--ry',(ex*16).toFixed(2)+'deg');ch.style.setProperty('--rx',(-ey*11).toFixed(2)+'deg')}
+ch.style.transition='none';requestAnimationFrame(eyes);
+if(!T||!cv)return;
+var rd;try{rd=new T.WebGLRenderer({canvas:cv,alpha:true,antialias:true})}catch(e){return}
+rd.setPixelRatio(Math.min(devicePixelRatio||1,2));
+var sce=new T.Scene(),cam=new T.PerspectiveCamera(45,1,.1,100);cam.position.z=9;
+sce.add(new T.AmbientLight(0x8890ff,.6));
+var l1=new T.PointLight(0x7F95FF,2.2,40);l1.position.set(-6,4,6);sce.add(l1);
+var l2=new T.PointLight(0xFF5C93,2.2,40);l2.position.set(6,-3,6);sce.add(l2);
+var g=new T.Group();sce.add(g);
+var m1=new T.MeshStandardMaterial({color:0x7F95FF,metalness:.7,roughness:.25,flatShading:true}),m2=new T.MeshStandardMaterial({color:0xFF5C93,metalness:.6,roughness:.3,flatShading:true});
+var ring=new T.Mesh(new T.TorusGeometry(3.1,.07,16,120),m2);ring.rotation.x=1.2;g.add(ring);
+var ring2=new T.Mesh(new T.TorusGeometry(4.2,.05,16,120),m1);ring2.rotation.set(1.9,.4,0);g.add(ring2);
+var gems=[];
+for(var i=0;i<9;i++){var gm=new T.Mesh(i%2?new T.OctahedronGeometry(.45):new T.IcosahedronGeometry(.4),i%2?m1:m2),a=i/9*6.283,rr=3.6+(i%3)*.5;gm.position.set(Math.cos(a)*rr,Math.sin(a*1.7)*2,Math.sin(a)*1.5-.5);gm.userData={a:a,s:.4+Math.random()*.6};g.add(gm);gems.push(gm)}
+var pg=new T.BufferGeometry(),pa=new Float32Array(420);for(var j=0;j<420;j++)pa[j]=(Math.random()-.5)*(j%3==2?6:14);pg.setAttribute("position",new T.BufferAttribute(pa,3));var pts=new T.Points(pg,new T.PointsMaterial({size:.05,color:0xC9D2FF,transparent:true,opacity:.65,depthWrite:false}));g.add(pts);
+function size(){var w=sc.clientWidth,h=sc.clientHeight;rd.setSize(w,h,false);cam.aspect=w/h;cam.updateProjectionMatrix();g.scale.setScalar(.55+.45*Math.min(1,w/620))}
+size();if(window.ResizeObserver)new ResizeObserver(size).observe(sc);
+var vis=true,t=0;new IntersectionObserver(function(e){vis=e[0].isIntersecting}).observe(sc);
+function loop(){requestAnimationFrame(loop);if(!vis||d.hidden)return;t+=.008;gems.forEach(function(m){m.rotation.x+=.01*m.userData.s;m.rotation.y+=.014*m.userData.s;m.position.y+=Math.sin(t*2+m.userData.a)*.004});ring.rotation.z+=.004;pts.rotation.y+=.0008;ring2.rotation.y+=.003;g.rotation.y+=(px*.8-g.rotation.y)*.05;g.rotation.x+=(py*.5-g.rotation.x)*.05;rd.render(sce,cam)}
+if(rm)rd.render(sce,cam);else loop();
+}());
 </script>
 </body>
 </html>
