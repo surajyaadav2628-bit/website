@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>invsuraj – Alight Motion XML Pack</title>
+<meta name="description" content="Aesthetic Alight Motion XML files by invsuraj. Import, swap in your clips and edit.">
+<meta name="theme-color" content="#12112B">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;800&family=Manrope:wght@400;600&family=Unbounded:wght@800&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:dark;--bg:#12112B;--surface:#1C1B3D;--text:#F1F0FF;--muted:#A9A8CC;--line:#33315F;--blue:#7F95FF;--pink:#FF5C93;--btn-text:#12112B;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#12112B;--surface:#1C1B3D;--text:#F1F0FF;--muted:#A9A8CC;--line:#33315F;--blue:#7F95FF;--pink:#FF5C93;--btn-text:#12112B}}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#12112B;--surface:#1C1B3D;--text:#F1F0FF;--muted:#A9A8CC;--line:#33315F;--blue:#7F95FF;--pink:#FF5C93;--btn-text:#12112B}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Manrope,system-ui,sans-serif;font-size:17px;line-height:1.6}
+h1,h2,h3{font-family:Sora,system-ui,sans-serif;line-height:1.1;margin:0}
+.wrap{max-width:960px;margin:0 auto;padding:0 22px;overflow-x:clip}
+header{padding:22px 0;display:flex;justify-content:space-between;align-items:center}
+.logo{font-family:Sora,sans-serif;letter-spacing:.04em;font-weight:800;font-size:20px}
+header a.nav{color:var(--text);font-weight:600;text-decoration:none}
+.hero{padding:40px 0 64px}
+h1{font-size:clamp(40px,8vw,76px);font-weight:800;letter-spacing:-.02em;max-width:12ch}
+.lead{max-width:46ch;color:var(--muted);margin:20px 0 28px;font-size:19px}
+.btn{display:inline-block;background:var(--blue);color:var(--btn-text);padding:14px 26px;border-radius:999px;font-weight:600;text-decoration:none}
+.btn:focus-visible,a:focus-visible{outline:3px solid var(--pink);outline-offset:3px}
+.timeline{margin-top:48px;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px;position:relative;overflow:hidden}
+.track{display:flex;gap:6px;margin-bottom:8px;height:34px}
+.clip{border-radius:6px;background:var(--blue);opacity:.9}
+.clip.p{background:var(--pink)}.clip.l{background:var(--line)}
+.clip{display:block;line-height:34px;padding:0 10px;font-size:13px;font-weight:600;color:#12112B;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.clip.l{color:var(--text)}
+.playhead{position:absolute;top:0;bottom:0;left:0;width:2px;background:var(--pink);animation:scan 4s ease-out 1 forwards}
+@keyframes scan{from{left:0}to{left:calc(100% - 2px)}}
+@media (prefers-reduced-motion:reduce){.playhead{animation:none;left:62%}}
+section{padding:56px 0;border-top:1px solid var(--line)}
+h2{font-size:clamp(28px,5vw,40px);margin-bottom:22px;letter-spacing:-.01em}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.item h3{font-size:20px;margin-bottom:6px}
+.item p{margin:0;color:var(--muted)}
+.price{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:32px;display:flex;flex-wrap:wrap;gap:28px;align-items:center;justify-content:space-between}
+.price .amt{font-family:Sora,sans-serif;font-size:56px;font-weight:800}
+.price ul{margin:8px 0 0;padding-left:20px;color:var(--muted)}
+details{border-bottom:1px solid var(--line);padding:14px 0}
+summary{font-weight:600;cursor:pointer}
+details p{margin:10px 0 0;color:var(--muted)}
+.sub{color:var(--muted);margin:-8px 0 24px}
+.boxes{display:grid;grid-template-columns:repeat(auto-fill,minmax(148px,1fr));gap:16px}
+.box{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:10px 10px 14px}
+.art{aspect-ratio:4/5;border-radius:10px;margin-bottom:10px;position:relative;overflow:hidden}
+.art::after{content:"";position:absolute;left:50%;top:50%;width:38px;height:38px;margin:-19px 0 0 -19px;border-radius:50%;border:2px solid rgba(255,255,255,.9);background:rgba(255,255,255,.18)}
+.box h3{font-size:18px}
+.box p{margin:2px 0 10px;color:var(--muted);font-size:14px}
+.mini{display:block;text-align:center;border:1.5px solid var(--blue);color:var(--blue);border-radius:999px;padding:7px 10px;font-weight:600;font-size:14px;text-decoration:none}
+.mini:hover{background:var(--blue);color:var(--btn-text)}
+body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(700px 420px at 12% 0%,rgba(127,149,255,.30),transparent 70%),radial-gradient(560px 420px at 92% 18%,rgba(255,92,147,.22),transparent 70%),radial-gradient(700px 500px at 50% 100%,rgba(127,149,255,.16),transparent 70%)}
+h1,h2,h3{letter-spacing:-.02em}
+h1{font-size:clamp(34px,7vw,66px);max-width:14ch;background:linear-gradient(95deg,#FFFFFF,#C9D2FF 50%,#FFC0D6);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 0 26px rgba(127,149,255,.45))}
+h2{text-shadow:0 0 26px rgba(127,149,255,.4)}
+.logo{text-shadow:0 0 18px rgba(127,149,255,.85)}
+.btn{background:linear-gradient(110deg,#7F95FF,#FF5C93);color:#12112B;box-shadow:0 0 28px rgba(127,149,255,.55),0 8px 32px rgba(255,92,147,.3)}
+.timeline{border-color:rgba(127,149,255,.35);box-shadow:0 0 60px -10px rgba(127,149,255,.45)}
+.clip{box-shadow:0 0 14px rgba(127,149,255,.6)}
+.clip.p{box-shadow:0 0 14px rgba(255,92,147,.65)}
+.playhead{box-shadow:0 0 14px 2px var(--pink)}
+.price{border-color:rgba(127,149,255,.4);box-shadow:0 0 70px -20px rgba(255,92,147,.55)}
+.box{isolation:isolate;box-shadow:0 10px 40px -14px rgba(127,149,255,.4);transition:box-shadow .25s,transform .25s}
+.box:hover{transform:translateY(-4px);box-shadow:0 0 0 1px var(--blue),0 0 38px rgba(127,149,255,.5)}
+.art{overflow:visible}
+.art::before{content:"";position:absolute;inset:10px;background:inherit;border-radius:10px;filter:blur(22px);opacity:.65;z-index:-1}
+.mini:hover{box-shadow:0 0 20px rgba(127,149,255,.6)}
+@media (prefers-reduced-motion:reduce){.box{transition:none}.box:hover{transform:none}}
+#welcome{position:fixed;inset:0;z-index:100;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;text-align:center;padding:24px;perspective:900px;background:radial-gradient(600px 400px at 50% 38%,rgba(127,149,255,.38),transparent 70%),radial-gradient(500px 400px at 82% 82%,rgba(255,92,147,.26),transparent 70%),#0B0A22;transition:opacity .7s,visibility .7s;animation:autohide 0s 9s forwards}
+#welcome.hide{opacity:0;visibility:hidden}
+@keyframes autohide{to{opacity:0;visibility:hidden}}
+@keyframes rise{from{opacity:0;transform:translateY(34px)}to{opacity:1;transform:none}}
+@keyframes tilt{from{transform:rotateY(-15deg) rotateX(6deg)}to{transform:rotateY(15deg) rotateX(-4deg)}}
+#welcome .stage{transform-style:preserve-3d;animation:rise .9s cubic-bezier(.2,.8,.2,1) both}
+.w3d{margin:0;font-family:Unbounded,Sora,sans-serif;font-weight:800;font-size:clamp(40px,12.5vw,116px);line-height:1.05;color:#fff;animation:tilt 5s ease-in-out infinite alternate;text-shadow:1px 1px 0 #8FA2FF,2px 2px 0 #7D91F2,3px 3px 0 #6C80E3,4px 4px 0 #5C6FD2,5px 5px 0 #4D5EC1,6px 6px 0 #3F4EAF,7px 7px 0 #33409D,8px 8px 0 #28338B,9px 9px 0 #1F2A79,10px 10px 0 #182168,16px 20px 34px rgba(255,92,147,.55),0 0 70px rgba(127,149,255,.65)}
+.wsub{margin:0;font-family:Sora,sans-serif;font-weight:600;font-size:clamp(20px,4vw,30px);text-shadow:0 0 22px rgba(127,149,255,.8);animation:rise .9s .35s both}
+.whi{margin:0;max-width:36ch;color:var(--muted);animation:rise .9s .6s both}
+#enter{border:0;font:inherit;font-weight:600;cursor:pointer;margin-top:8px;animation:rise .9s .85s both}
+@media (prefers-reduced-motion:reduce){#welcome *{animation:none!important}}
+body{overflow-x:clip}
+#bar{position:fixed;top:env(safe-area-inset-top,0px);left:0;right:0;height:3px;z-index:50;transform-origin:0 50%;transform:scaleX(0);background:linear-gradient(90deg,#7F95FF,#FF5C93);box-shadow:0 0 14px rgba(255,92,147,.8)}
+body::before{inset:-15% 0;transform:translate3d(0,max(-12vh,calc(var(--sy,0) * -.05px)),0)}
+.band{overflow:hidden;border-block:1px solid var(--line);padding:14px 0;margin:8px 0}
+.band{border:0;padding:26px 0;margin:8px 0;display:grid;gap:6px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}
+.bt{display:flex;align-items:center;gap:28px;width:max-content;white-space:nowrap;font-family:Unbounded,Sora,sans-serif;font-weight:800;font-size:clamp(30px,6.5vw,58px);line-height:1.15;letter-spacing:-.02em;color:#F1F0FF;text-shadow:0 0 28px rgba(127,149,255,.55);transform:translateX(calc(var(--sy,0) * -.35px))}
+.bt .ol{color:transparent;-webkit-text-stroke:1.5px rgba(241,240,255,.7);text-shadow:none}
+.bt i{flex:none;width:14px;height:14px;border-radius:50%;background:linear-gradient(135deg,#7F95FF,#FF5C93);box-shadow:0 0 16px rgba(255,92,147,.9)}
+.bt.rev{transform:translateX(calc(-1500px + var(--sy,0) * .35px))}
+.js .rv{opacity:0;transform:translateY(46px) scale(.96);filter:blur(8px);transition:opacity .8s cubic-bezier(.2,.8,.2,1),transform .8s cubic-bezier(.2,.8,.2,1),filter .8s;transition-delay:var(--d,0s)}
+.js .rv.in{opacity:1;transform:none;filter:none}
+.js .box.rv{transform:perspective(800px) rotateX(28deg) translateY(56px) scale(.9)}
+.js .box.rv.in{transform:none}
+.js h2.rv{transform:translateX(-48px);filter:blur(10px)}
+.js h2.rv.in{transform:none}
+.js .price.rv{transform:scale(.85)}
+.js .price.rv.in{transform:none}
+.js details.rv:nth-of-type(odd){transform:translateX(-60px)}
+.js details.rv:nth-of-type(even){transform:translateX(60px)}
+.js details.rv.in{transform:none}
+.hero{position:relative}
+.hero::before{content:"";position:absolute;right:0;top:10px;width:260px;height:260px;border-radius:50%;background:radial-gradient(circle,rgba(255,92,147,.45),transparent 65%);filter:blur(10px);z-index:-1;pointer-events:none;animation:floaty 7s ease-in-out infinite alternate}
+@keyframes floaty{to{transform:translate(-40px,50px) scale(1.2)}}
+.btn{position:relative;overflow:hidden}
+.btn::after{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.55),transparent);transform:skewX(-20deg);animation:shine 3.2s ease-in-out infinite}
+@keyframes shine{0%,55%{left:-60%}100%{left:130%}}
+.price{animation:pglow 3.5s ease-in-out infinite alternate}
+@keyframes pglow{from{box-shadow:0 0 50px -22px rgba(255,92,147,.4)}to{box-shadow:0 0 90px -10px rgba(127,149,255,.7)}}
+#stats{padding:28px 0;border-top:0}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:20px;text-align:center;box-shadow:0 0 40px -16px rgba(127,149,255,.5)}
+.num{display:block;font-family:Sora,sans-serif;font-weight:800;font-size:clamp(34px,7vw,54px);line-height:1.2;background:linear-gradient(95deg,#fff,#FF8FB3);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 0 16px rgba(255,92,147,.5))}
+.stat span:last-child{color:var(--muted);font-size:15px}
+.box{position:relative}
+.box::after{content:"";position:absolute;inset:0;border-radius:16px;pointer-events:none;opacity:0;transition:opacity .25s;background:radial-gradient(180px circle at var(--mx,50%) var(--my,50%),rgba(255,255,255,.16),transparent 60%)}
+.box:hover::after{opacity:1}
+.box:hover{transform:perspective(700px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg)) translateY(-4px);transition:box-shadow .25s,transform .08s}
+.steps{--lp:1;position:relative;padding-left:60px;display:grid;gap:34px;max-width:560px}
+.steps::before,.steps::after{content:"";position:absolute;left:19px;top:20px;bottom:var(--lb,33px);width:3px;border-radius:3px}
+.steps::before{background:var(--line)}
+.steps::after{background:linear-gradient(var(--blue),var(--pink));box-shadow:0 0 14px rgba(255,92,147,.7);transform-origin:top;transform:scaleY(var(--lp))}
+.step{position:relative}
+.step h3{font-size:20px;margin-bottom:4px}
+.step p{margin:0;color:var(--muted)}
+.dot{position:absolute;left:-60px;top:0;width:40px;height:40px;border-radius:50%;display:grid;place-items:center;font-family:Sora,sans-serif;font-weight:800;background:var(--surface);border:2px solid var(--line);color:var(--muted);transition:all .4s}
+.step.on .dot,html:not(.js) .dot{border-color:var(--pink);color:#fff;background:linear-gradient(135deg,var(--blue),var(--pink));box-shadow:0 0 22px rgba(255,92,147,.8)}
+.fab{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:40;padding:13px 22px;border-radius:999px;font-weight:700;text-decoration:none;color:#12112B;background:linear-gradient(110deg,#7F95FF,#FF5C93);box-shadow:0 0 26px rgba(255,92,147,.6),0 8px 28px rgba(0,0,0,.4);transition:opacity .35s,transform .35s,visibility .35s}
+.fab::before{content:"";position:absolute;inset:0;border-radius:999px;border:2px solid var(--pink);animation:ring 2s ease-out infinite}
+@keyframes ring{from{opacity:.8;transform:scale(1)}to{opacity:0;transform:scale(1.5)}}
+.js .fab:not(.show){opacity:0;transform:translateY(20px) scale(.9);visibility:hidden;pointer-events:none}
+@media (prefers-reduced-motion:reduce){.hero::before,.btn::after,.price,.fab::before{animation:none}.box:hover{transform:none}}
+.trust{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 22px}
+.trust span{padding:8px 16px;border-radius:999px;border:1px solid rgba(127,149,255,.5);background:rgba(127,149,255,.1);font-weight:600;font-size:14px;animation:chip 3s ease-in-out infinite alternate}
+.trust span:nth-child(2){animation-delay:.6s}
+.trust span:nth-child(3){animation-delay:1.2s}
+@keyframes chip{from{box-shadow:0 0 0 rgba(127,149,255,0)}to{box-shadow:0 0 22px rgba(127,149,255,.55)}}
+.pol{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:4px 18px;margin-bottom:12px;transition:border-color .3s,box-shadow .3s}
+.pol[open]{border-color:var(--blue);box-shadow:0 0 34px -10px rgba(127,149,255,.6)}
+.pol summary{list-style:none;display:flex;justify-content:space-between;align-items:center;padding:12px 0;font-family:Sora,sans-serif}
+.pol summary::-webkit-details-marker{display:none}
+.pol summary::after{content:"+";font-size:26px;line-height:1;color:var(--pink);transition:transform .3s}
+.pol[open] summary::after{transform:rotate(45deg)}
+.pbody{padding:0 0 14px}
+.pbody p{margin:0 0 10px;color:var(--muted)}
+.pol[open] .pbody{animation:popen .45s cubic-bezier(.2,.8,.2,1)}
+@keyframes popen{from{opacity:0;transform:translateY(-10px)}to{opacity:1;transform:none}}
+footer{position:relative}
+footer::before{content:"";position:absolute;left:0;right:0;top:0;height:2px;background:linear-gradient(90deg,transparent,#7F95FF,#FF5C93,#7F95FF,transparent);background-size:200% 100%;animation:sheen 4s linear infinite}
+@keyframes sheen{to{background-position:-200% 0}}
+@media (prefers-reduced-motion:reduce){.trust span,footer::before,.pol[open] .pbody{animation:none}}
+.sup{display:flex;flex-wrap:wrap;gap:16px;align-items:center}
+.ig{display:flex;align-items:center;gap:16px;padding:16px 28px 16px 16px;border-radius:18px;text-decoration:none;color:#fff;text-shadow:0 1px 8px rgba(0,0,0,.35);background:linear-gradient(135deg,#515BD4,#8134AF 35%,#DD2A7B 70%,#F58529);box-shadow:0 0 36px rgba(221,42,123,.5);transition:transform .25s,box-shadow .25s}
+.ig:hover{transform:translateY(-3px);box-shadow:0 0 54px rgba(221,42,123,.75)}
+.igi{position:relative;width:52px;height:52px;border-radius:14px;display:grid;place-items:center;background:rgba(255,255,255,.18)}
+.igi::before{content:"";position:absolute;inset:0;border-radius:14px;border:2px solid rgba(255,255,255,.8);animation:ring 2s ease-out infinite}
+.igt{display:grid;line-height:1.25}
+.igt b{font-family:Sora,sans-serif;font-size:20px}
+.igt small{opacity:.92;font-size:14px}
+.mail{color:var(--text);font-weight:600;padding:14px 22px;border:1px solid var(--line);border-radius:999px;text-decoration:none;background:var(--surface);transition:border-color .25s,box-shadow .25s}
+.mail:hover{border-color:var(--blue);box-shadow:0 0 22px rgba(127,149,255,.5)}
+@media (prefers-reduced-motion:reduce){.igi::before{animation:none}}
+html{scrollbar-gutter:stable;scrollbar-color:#3A3870 transparent}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+html.js:has(#welcome:not(.hide)){overflow:hidden}
+::selection{background:var(--pink);color:#12112B}
+.js:not(.ready) .playhead{animation:none}
+.js:not(.ready) .hero>*{opacity:0}
+.js.ready .hero>*{animation:rise .9s cubic-bezier(.2,.8,.2,1) backwards}
+.js.ready .hero>:nth-child(2){animation-delay:.12s}
+.js.ready .hero>:nth-child(3){animation-delay:.24s}
+.js.ready .hero>:nth-child(4){animation-delay:.38s}
+.btn{transition:transform .25s,box-shadow .25s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 0 40px rgba(127,149,255,.8),0 10px 36px rgba(255,92,147,.4)}
+header a.nav{transition:color .25s,text-shadow .25s}
+header a.nav:hover{color:var(--pink);text-shadow:0 0 16px rgba(255,92,147,.7)}
+.mini{transition:background .25s,color .25s,box-shadow .25s}
+summary:focus-visible{outline:3px solid var(--pink);outline-offset:4px;border-radius:6px}
+details:not(.pol) summary{list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px;transition:color .25s}
+details:not(.pol) summary::-webkit-details-marker{display:none}
+details:not(.pol) summary::after{content:"+";font-size:24px;line-height:1;color:var(--pink);transition:transform .3s}
+details:not(.pol)[open] summary::after{transform:rotate(45deg)}
+details:not(.pol) summary:hover{color:var(--blue)}
+details:not(.pol)[open] p{animation:popen .4s cubic-bezier(.2,.8,.2,1)}
+@media (max-width:520px){.clip .x{display:none}.clip{font-size:11px;padding:0 6px}.stat{padding:14px 8px}.num{font-size:26px}.stat span:last-child{display:block;font-size:12.5px;line-height:1.3}.price{padding:24px}}
+@media (prefers-reduced-motion:reduce){details:not(.pol)[open] p{animation:none}.btn:hover{transform:none}}
+footer p{margin:0 0 6px}
+footer a{color:inherit;text-underline-offset:3px}
+footer a:hover{color:var(--text)}
+footer{padding:36px 0 96px;color:var(--muted);font-size:15px;border-top:1px solid var(--line)}
+</style>
+<script>if(!window.matchMedia('(prefers-reduced-motion:reduce)').matches){document.documentElement.classList.add('js');setTimeout(function(){document.documentElement.classList.add('ready')},7500)}</script>
+</head>
+<body>
+<div id="welcome" role="dialog" aria-modal="true" aria-label="Welcome">
+<div class="stage"><p class="w3d">Welcome</p></div>
+<p class="wsub">to invsuraj</p>
+<p class="whi">Aapka swagat hai. Pick your favourite Alight Motion XML and make your edits shine.</p>
+<button class="btn" id="enter" type="button">Enter the store</button>
+</div>
+<div id="bar"></div>
+<a class="fab" href="mailto:sur2j@hotmail.com?subject=Alight%20Motion%20XML%20Pack%20order">Order now</a>
+<div class="wrap">
+<header><span class="logo">invsuraj</span><a class="nav" href="#buy">Buy now</a></header>
+
+<main>
+<div class="hero">
+<h1>Alight Motion XML, ready to import.</h1>
+<p class="lead">My real Alight Motion XML files. Import one, swap in your own clips, and keep the look.</p>
+<a class="btn" href="#buy">Get the XML Pack</a>
+<div class="timeline" aria-hidden="true">
+<div class="track"><span class="clip" style="flex:3">Neon<span class="x"> Glitch</span></span><span class="clip p" style="flex:3">Soft<span class="x"> Pastel</span></span><span class="clip" style="flex:3"><span class="x">Retro </span>VHS</span><span class="clip l" style="flex:2">+</span><span class="clip p" style="flex:3">Golden<span class="x"> Hour</span></span></div>
+<div class="track"><span class="clip l" style="flex:3">Velocity</span><span class="clip" style="flex:5"><span class="x">Dark </span>Cinematic</span><span class="clip p" style="flex:2">Y2K</span><span class="clip" style="flex:3">Cyber<span class="x"> Grid</span></span></div>
+<div class="track"><span class="clip p" style="flex:4">Anime<span class="x"> Flash</span></span><span class="clip l" style="flex:2">Fade</span><span class="clip" style="flex:5">Dreamy<span class="x"> Blur</span></span></div>
+<span class="playhead"></span>
+</div>
+</div>
+
+<div class="band" aria-hidden="true"><div class="bt"><span>Grab your XML</span><i></i><span class="ol">Grab your XML</span><i></i><span>Grab your XML</span><i></i><span class="ol">Grab your XML</span><i></i><span>Grab your XML</span><i></i><span class="ol">Grab your XML</span><i></i><span>Grab your XML</span><i></i><span class="ol">Grab your XML</span><i></i></div><div class="bt rev"><span class="ol">Grab your XML</span><i></i><span>Grab your XML</span><i></i><span class="ol">Grab your XML</span><i></i><span>Grab your XML</span><i></i><span class="ol">Grab your XML</span><i></i><span>Grab your XML</span><i></i><span class="ol">Grab your XML</span><i></i><span>Grab your XML</span><i></i></div></div>
+<section id="stats"><div class="stats">
+<div class="stat"><b class="num" data-to="12" data-suf="+">12+</b><span>Styles to pick from</span></div>
+<div class="stat"><b class="num" data-to="100" data-suf="%">100%</b><span>Editable in Alight Motion</span></div>
+<div class="stat"><b class="num" data-pre="₹" data-to="499">₹499</b><span>One pack, one price</span></div>
+</div></section>
+<section id="collection">
+<h2>The collection</h2>
+<p class="sub">Pick a style and tap Get this XML. New ones are added often.</p>
+<div class="boxes">
+<article class="box"><div class="art" style="background:linear-gradient(135deg,#ff2bd6,#3050ff 60%,#00e5ff)"></div><h3>Neon Glitch</h3><p>Fast cuts, RGB split</p><a class="mini" href="mailto:sur2j@hotmail.com?subject=Order%20-%20Neon%20Glitch">Get this XML</a></article>
+<article class="box"><div class="art" style="background:linear-gradient(160deg,#ffd1e8,#cfe0ff 55%,#d9fff0)"></div><h3>Soft Pastel</h3><p>Light, calm, dreamy</p><a class="mini" href="mailto:sur2j@hotmail.com?subject=Order%20-%20Soft%20Pastel">Get this XML</a></article>
+<article class="box"><div class="art" style="background:linear-gradient(180deg,#ff7a59,#c2185b 50%,#2b1055)"></div><h3>Retro VHS</h3><p>Old tape, warm grain</p><a class="mini" href="mailto:sur2j@hotmail.com?subject=Order%20-%20Retro%20VHS">Get this XML</a></article>
+<article class="box"><div class="art" style="background:linear-gradient(160deg,#0f2027,#203a43 55%,#c9a46a)"></div><h3>Dark Cinematic</h3><p>Moody, film look</p><a class="mini" href="mailto:sur2j@hotmail.com?subject=Order%20-%20Dark%20Cinematic">Get this XML</a></article>
+<article class="box"><div class="art" style="background:linear-gradient(135deg,#e8eaf6,#9fa8da 45%,#f48fb1)"></div><h3>Y2K Chrome</h3><p>Shiny, early 2000s</p><a class="mini" href="mailto:sur2j@hotmail.com?subject=Order%20-%20Y2K%20Chrome">Get this XML</a></article>
+<article class="box"><div class="art" style="background:radial-gradient(circle at 30% 20%,#fff59d,#ff6f91 45%,#4a148c)"></div><h3>Anime Flash</h3><p>Sharp hits, bright pops</p><a class="mini" href="mailto:sur2j@hotmail.com?subject=Order%20-%20Anime%20Flash">Get this XML</a></article>
+<article class="box"><div class="art" style="background:linear-gradient(170deg,#ffe29f,#ffa99f 50%,#ff719a)"></div><h3>Golden Hour</h3><p>Warm sunset glow</p><a class="mini" href="mailto:sur2j@hotmail.com?subject=Order%20-%20Golden%20Hour">Get this XML</a></article>
+<article class="box"><div class="art" style="background:linear-gradient(135deg,#43cea2,#185a9d)"></div><h3>Smooth Velocity</h3><p>Slow-fast speed ramps</p><a class="mini" href="mailto:sur2j@hotmail.com?subject=Order%20-%20Smooth%20Velocity">Get this XML</a></article>
+<article class="box"><div class="art" style="background:linear-gradient(#0b0b2b,#3a0ca3 60%,#4cc9f0)"></div><h3>Cyber Grid</h3><p>Futuristic, techy</p><a class="mini" href="mailto:sur2j@hotmail.com?subject=Order%20-%20Cyber%20Grid">Get this XML</a></article>
+<article class="box"><div class="art" style="background:radial-gradient(circle at 70% 30%,#c3b1ff,#f7b2d9 50%,#9bd4ff)"></div><h3>Dreamy Blur</h3><p>Soft glow, smooth fades</p><a class="mini" href="mailto:sur2j@hotmail.com?subject=Order%20-%20Dreamy%20Blur">Get this XML</a></article>
+<article class="box"><div class="art" style="background:linear-gradient(160deg,#f5f5f5,#9e9e9e 55%,#212121)"></div><h3>Mono Minimal</h3><p>Black and white, clean</p><a class="mini" href="mailto:sur2j@hotmail.com?subject=Order%20-%20Mono%20Minimal">Get this XML</a></article>
+<article class="box"><div class="art" style="background:linear-gradient(135deg,#f12711,#f5af19 50%,#1a1a1a)"></div><h3>Street Shake</h3><p>Camera shake, hard beats</p><a class="mini" href="mailto:sur2j@hotmail.com?subject=Order%20-%20Street%20Shake">Get this XML</a></article>
+</div>
+</section>
+
+<section id="inside">
+<h2>What you get</h2>
+<div class="grid">
+<div class="item"><h3>XML files</h3><p>Full edits you can open in Alight Motion, with every layer, effect and keyframe in place.</p></div>
+<div class="item"><h3>Looks and effects</h3><p>Colour, text and transition styles saved inside the XML, ready to use.</p></div>
+<div class="item"><h3>Quick guide</h3><p>A short walkthrough on how to import the XML in Alight Motion and swap in your own clips.</p></div>
+<div class="item"><h3>Free updates</h3><p>New files I add to the pack are yours at no extra cost.</p></div>
+</div>
+</section>
+
+<section id="buy">
+<h2>One pack, one price</h2>
+<div class="price">
+<div>
+<div class="amt">₹499</div>
+<ul><li>Instant download after payment</li><li>Use in your own videos</li><li>Reselling the files is not allowed</li></ul>
+</div>
+<a class="btn" href="mailto:sur2j@hotmail.com?subject=Alight%20Motion%20XML%20Pack%20order">Buy the pack</a>
+</div>
+</section>
+
+<section id="how">
+<h2>How it works</h2>
+<div class="steps">
+<div class="step"><span class="dot">1</span><h3>Choose a style</h3><p>Pick any box from the collection and send your order by email.</p></div>
+<div class="step"><span class="dot">2</span><h3>Get your file</h3><p>You receive the XML download link right after payment.</p></div>
+<div class="step"><span class="dot">3</span><h3>Import and edit</h3><p>Open Alight Motion, import the XML and add your own clips.</p></div>
+</div>
+</section>
+
+<section id="faq">
+<h2>Questions</h2>
+<details><summary>Which editing app does it work with?</summary><p>Alight Motion, on Android and iPhone. Some effects may need the paid version of the app.</p></details>
+<details><summary>How do I import the XML?</summary><p>Download the file, open Alight Motion, and import it as a project. The guide in the pack shows each step.</p></details>
+<details><summary>How do I receive the files?</summary><p>You get a download link right after payment. If something goes wrong, message me and I will resend it.</p></details>
+<details><summary>Can I use the edits on my channel?</summary><p>Yes. Use them in your own videos, including paid work. Just don’t share or sell the XML files themselves.</p></details>
+</section>
+<section id="policies">
+<h2>Policies and safety</h2>
+<div class="trust"><span>Original designs</span><span>Personal licence</span><span>Free updates</span></div>
+<details class="pol" name="policy"><summary>Copyright and licence</summary><div class="pbody"><p>All XML files, presets, designs, text and graphics on this site are © 2026 invsuraj. All rights reserved.</p><p>When you buy, you get a personal licence to use the XML in your own videos, including paid client work. You may not resell, share, upload, leak or give away the XML files, in full or in part.</p></div></details>
+<details class="pol" name="policy"><summary>Trademark notice</summary><div class="pbody"><p>Alight Motion is a trademark of its respective owner. invsuraj is an independent seller and is not affiliated with, sponsored or endorsed by Alight Motion.</p><p>Other names mentioned here belong to their owners. The invsuraj name and logo may not be copied or used without permission.</p></div></details>
+<details class="pol" name="policy"><summary>Privacy</summary><div class="pbody"><p>We only keep what you send us by email, such as your email address and order details, so we can deliver your files and help you. We do not sell or share your details with anyone.</p><p>This site loads its fonts from Google Fonts. You can ask us to delete your details at any time by emailing sur2j@hotmail.com.</p></div></details>
+<details class="pol" name="policy"><summary>Terms of sale</summary><div class="pbody"><p>Orders are placed by email. Prices are in Indian rupees and may change. Your files are sent after your payment is confirmed.</p><p>By buying, you agree to all the policies on this page.</p></div></details>
+<details class="pol" name="policy"><summary>Refunds</summary><div class="pbody"><p>XML files are digital and cannot be returned, so payments are generally not refunded once the files are delivered.</p><p>If a file is broken or does not open, email us within 7 days and we will fix it or replace it.</p></div></details>
+<details class="pol" name="policy"><summary>Safety and fair use</summary><div class="pbody"><p>Our files are XML data files made for Alight Motion. Only download from the link you receive from us at sur2j@hotmail.com.</p><p>We will never ask for your password, OTP or card PIN. Beware of fake sellers and copies of this site. Please be respectful when you contact us; abuse or misuse of the files can lead to your order being cancelled.</p></div></details>
+</section>
+<section id="support">
+<h2>Customer support</h2>
+<p class="sub">Message me for help with your order or your XML file.</p>
+<div class="sup">
+<a class="ig" href="https://www.instagram.com/inv.suraj" target="_blank" rel="noopener"><span class="igi"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#fff" stroke="none"/></svg></span><span class="igt"><b>inv.suraj</b><small>Message me on Instagram</small></span></a>
+<a class="mail" href="mailto:sur2j@hotmail.com">Email: sur2j@hotmail.com</a>
+</div>
+</section>
+</main>
+
+<footer><p>© 2026 invsuraj. All rights reserved. <a href="#policies">Policies</a></p><p>Alight Motion is a trademark of its respective owner and is not affiliated with invsuraj.</p><p>Questions? <a href="mailto:sur2j@hotmail.com">sur2j@hotmail.com</a> and Instagram <a href="https://www.instagram.com/inv.suraj" target="_blank" rel="noopener">@inv.suraj</a></p></footer>
+</div>
+<script>
+(function(){var r=document.documentElement,w=document.getElementById('welcome'),b=document.getElementById('enter'),wr=document.querySelector('.wrap'),done=false;if(!w||!b){r.classList.add('ready');return}wr.inert=true;function close(){if(done)return;done=true;wr.inert=false;r.classList.add('ready');w.classList.add('hide');setTimeout(function(){w.remove()},800)}b.addEventListener('click',close);document.addEventListener('keydown',function(e){if(e.key==='Escape')close()});setTimeout(close,7000);b.focus({preventScroll:true})}());
+</script>
+<script>
+(function(){var d=document,r=d.documentElement;if(!r.classList.contains('js'))return;var bar=d.getElementById('bar'),fab=d.querySelector('.fab'),st=d.querySelector('.steps'),sl=d.querySelectorAll('.step'),tk=false;function upd(){var y=window.scrollY,h=r.scrollHeight-window.innerHeight;r.style.setProperty('--sy',y);if(fab)fab.classList.toggle('show',y>500);if(st){var rc=st.getBoundingClientRect(),lh=sl[sl.length-1].offsetHeight,L=Math.max(rc.height-lh,1),p=Math.max(0,Math.min(1,(window.innerHeight*.72-rc.top-20)/L));st.style.setProperty('--lb',(lh-20)+'px');st.style.setProperty('--lp',p);sl.forEach(function(s){s.classList.toggle('on',s.getBoundingClientRect().top<window.innerHeight*.72)})}if(bar)bar.style.transform='scaleX('+(h>0?Math.min(y/h,1):0)+')';tk=false}window.addEventListener('scroll',function(){if(!tk){tk=true;requestAnimationFrame(upd)}},{passive:true});upd();var io=new IntersectionObserver(function(es){es.forEach(function(e){var el=e.target;clearTimeout(el._t);if(e.isIntersecting){el.classList.add('in');el._t=setTimeout(function(){el.classList.remove('rv','in')},2400)}else{el.classList.remove('in');el.classList.add('rv')}})},{threshold:.12,rootMargin:'0px 0px -6% 0px'});d.querySelectorAll('main section h2,.sub,.item,.box,.price,details,.step,.stat').forEach(function(el){var i=Array.prototype.indexOf.call(el.parentNode.children,el);el.style.setProperty('--d',(i%4)*0.1+'s');el.classList.add('rv');io.observe(el)});d.querySelectorAll('.num').forEach(function(n){var to=+n.dataset.to,pre=n.dataset.pre||'',suf=n.dataset.suf||'';n.textContent=pre+0+suf;var rf=0;new IntersectionObserver(function(es){cancelAnimationFrame(rf);if(es[0].isIntersecting){var t0=null;rf=requestAnimationFrame(function f(t){if(!t0)t0=t;var p=Math.min((t-t0)/1500,1);n.textContent=pre+Math.round(to*(1-Math.pow(1-p,3)))+suf;if(p<1)rf=requestAnimationFrame(f)})}else{n.textContent=pre+0+suf}},{threshold:.6}).observe(n)});if(window.matchMedia('(hover:hover) and (pointer:fine)').matches)d.querySelectorAll('.box').forEach(function(b){b.addEventListener('pointermove',function(e){var q=b.getBoundingClientRect(),x=(e.clientX-q.left)/q.width,y=(e.clientY-q.top)/q.height;b.style.setProperty('--mx',x*100+'%');b.style.setProperty('--my',y*100+'%');b.style.setProperty('--rx',((.5-y)*10)+'deg');b.style.setProperty('--ry',((x-.5)*12)+'deg')});b.addEventListener('pointerleave',function(){b.style.setProperty('--rx','0deg');b.style.setProperty('--ry','0deg')})})}());
+</script>
+</body>
+</html>
